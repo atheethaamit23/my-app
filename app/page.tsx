@@ -1,65 +1,118 @@
-import Image from "next/image";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <Header />
+
+      <main className="min-h-screen bg-black text-white">
+
+        {/* HERO SECTION */}
+        <section className="flex flex-col items-center justify-center text-center py-24 px-6 bg-[url('/boxing-bg.jpg')] bg-cover bg-center">
+          <h1 className="text-5xl font-bold mb-6 leading-tight">
+            Leverage Star Boxing Club
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg mb-6 max-w-2xl text-gray-200">
+            Train like a champion. Build strength, discipline, and confidence with
+            professional boxing coaching in Dubai.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          <button className="bg-red-600 px-6 py-3 rounded hover:bg-red-500 transition font-semibold">
+            Join Free Trial Class
+          </button>
+        </section>
+
+        {/* ABOUT */}
+        <section className="py-20 px-6 text-center bg-gray-900">
+          <h2 className="text-3xl font-semibold mb-6">About Us</h2>
+          <p className="max-w-3xl mx-auto text-gray-300">
+            Leverage Star Boxing Club is a premium boxing and fitness training center
+            located in Dubai. We help beginners, amateurs, and professional fighters
+            improve technique, endurance, and overall fitness under expert coaching.
+          </p>
+        </section>
+
+        {/* SERVICES */}
+        <section className="py-20 px-6 bg-black text-center">
+          <h2 className="text-3xl font-semibold mb-12">Our Training Programs</h2>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="p-6 bg-gray-900 rounded">
+              <h3 className="text-xl font-bold mb-3">Boxing Fundamentals</h3>
+              <p className="text-gray-400">
+                Learn stance, footwork, punches, and defensive techniques.
+              </p>
+            </div>
+
+            <div className="p-6 bg-gray-900 rounded">
+              <h3 className="text-xl font-bold mb-3">Fitness & Conditioning</h3>
+              <p className="text-gray-400">
+                High-intensity workouts to build endurance and strength.
+              </p>
+            </div>
+
+            <div className="p-6 bg-gray-900 rounded">
+              <h3 className="text-xl font-bold mb-3">Pro Fight Training</h3>
+              <p className="text-gray-400">
+                Advanced coaching for competitive boxing athletes.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* WHY CHOOSE US */}
+        <section className="py-20 px-6 text-center bg-gray-900">
+          <h2 className="text-3xl font-semibold mb-12">Why Choose Us?</h2>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-gray-300">
+            <div>
+              <h4 className="font-bold mb-2">Professional Coaches</h4>
+              <p>Experienced trainers with real fight backgrounds.</p>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-2">Modern Facility</h4>
+              <p>Fully equipped boxing gym with premium training gear.</p>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-2">All Levels Welcome</h4>
+              <p>From beginners to pro fighters, everyone is welcome.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-20 px-6 bg-red-600 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Start Your Boxing Journey Today
+          </h2>
+          <p className="mb-6">
+            Book your free trial session and train with professionals.
+          </p>
+          <button className="bg-white text-red-600 px-6 py-3 rounded font-semibold">
+            Book Trial Class
+          </button>
+        </section>
+
+        {/* CONTACT */}
+        <section className="py-16 px-6 bg-black text-center">
+          <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+          <p className="text-gray-300">
+            First Floor, Blue Wave Tower - Office 9<br />
+            Al Ain - Dubai Rd - Wadi Al Safa 5<br />
+            Dubai, United Arab Emirates
+          </p>
+          <p className="mt-4 text-gray-400">
+            Phone: +971 52 745 0997
+          </p>
+        </section>
+
+        {/* FOOTER */}
+        <footer className="py-8 text-center text-gray-500 text-sm bg-black border-t border-gray-800">
+          © {new Date().getFullYear()} Leverage Star Boxing Club. All rights reserved.
+        </footer>
+
       </main>
-    </div>
+    </>
   );
 }
