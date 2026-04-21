@@ -5,131 +5,125 @@ export default function Home() {
     <>
       <Header />
 
-      <main className="min-h-screen bg-black text-white font-sans">
+      <main className="bg-white text-black">
 
-        {/* HERO */}
-        <section className="relative flex items-center justify-center text-center min-h-screen px-6 bg-[url('/boxing-bg.jpg')] bg-cover bg-center">
-          
-          {/* overlay */}
-          <div className="absolute inset-0 bg-black/70"></div>
+        {/* HERO SECTION */}
+        <section className="relative h-screen flex items-center justify-center bg-[url('/assets/hero.jpg')] bg-cover bg-center">
+          <div className="absolute inset-0 bg-black/60"></div>
 
-          <div className="relative max-w-4xl">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-              Leverage Star<br />
-              <span className="text-red-500">Boxing Club</span>
+          <div className="relative text-center text-white max-w-3xl px-6">
+            <h1 className="text-5xl md:text-6xl font-bold uppercase">
+              Activitar Fitness Club
             </h1>
-
-            <p className="mt-6 text-gray-300 text-lg max-w-2xl mx-auto">
-              Train like a champion with elite boxing coaching, strength training,
-              and professional fight preparation in Dubai.
+            <p className="mt-4 text-lg text-gray-200">
+              Train hard. Stay strong. Become the best version of yourself.
             </p>
-
-            <div className="mt-8 flex gap-4 justify-center">
-              <button className="bg-red-600 hover:bg-red-500 px-6 py-3 rounded-full font-semibold transition">
-                Join Free Trial
-              </button>
-
-              <button className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">
-                View Programs
-              </button>
-            </div>
+            <button className="mt-6 bg-red-600 hover:bg-red-500 px-6 py-3 font-semibold uppercase tracking-wide">
+              Join Now
+            </button>
           </div>
         </section>
 
-        {/* ABOUT */}
-        <section className="py-24 px-6 bg-gray-950 text-center">
-          <h2 className="text-4xl font-bold mb-6">About the Club</h2>
-          <p className="max-w-3xl mx-auto text-gray-400 leading-relaxed">
-            Leverage Star Boxing Club is a premium training facility in Dubai focused
-            on boxing excellence, fitness transformation, and discipline building.
-            We train beginners, amateurs, and competitive fighters with world-class coaching.
+        {/* FEATURES SECTION */}
+        <section className="py-20 bg-gray-100 text-center">
+          <h2 className="text-3xl font-bold mb-12 uppercase">What We Offer</h2>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+
+            <div className="bg-white p-8 shadow">
+              <h3 className="text-xl font-bold mb-2">Personal Training</h3>
+              <p className="text-gray-600">
+                One-on-one coaching to reach your fitness goals faster.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 shadow">
+              <h3 className="text-xl font-bold mb-2">Boxing Training</h3>
+              <p className="text-gray-600">
+                Professional boxing sessions for strength and discipline.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 shadow">
+              <h3 className="text-xl font-bold mb-2">Fitness Classes</h3>
+              <p className="text-gray-600">
+                Group workouts to stay motivated and fit.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ABOUT SECTION */}
+        <section className="py-24 px-6 bg-black text-white text-center">
+          <h2 className="text-4xl font-bold mb-6 uppercase">About Us</h2>
+          <p className="max-w-3xl mx-auto text-gray-300">
+            Activitar is a premium fitness and boxing training club focused on
+            strength, endurance, and discipline. We help athletes and beginners
+            achieve real transformation.
           </p>
         </section>
 
-        {/* PROGRAMS */}
-        <section className="py-24 px-6 bg-black text-center">
-          <h2 className="text-4xl font-bold mb-12">Training Programs</h2>
+        {/* SCHEDULE SECTION */}
+        <section className="py-20 bg-white text-center">
+          <h2 className="text-3xl font-bold mb-10 uppercase">Class Schedule</h2>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            
-            {[
-              {
-                title: "Boxing Fundamentals",
-                desc: "Learn footwork, stance, punches, and defense techniques."
-              },
-              {
-                title: "Strength & Conditioning",
-                desc: "Build endurance, speed, and explosive power."
-              },
-              {
-                title: "Pro Fight Camp",
-                desc: "Advanced training for competitive boxing athletes."
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-gray-900 p-8 rounded-xl hover:scale-105 transition">
-                <h3 className="text-xl font-bold text-red-500 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-400">{item.desc}</p>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 px-6 text-left">
+
+            <div className="border p-4">
+              <h3 className="font-bold">Morning Boxing</h3>
+              <p className="text-gray-600">Mon - Fri | 6:00 AM - 8:00 AM</p>
+            </div>
+
+            <div className="border p-4">
+              <h3 className="font-bold">Strength Training</h3>
+              <p className="text-gray-600">Mon - Sat | 5:00 PM - 7:00 PM</p>
+            </div>
+
+            <div className="border p-4">
+              <h3 className="font-bold">Cardio Blast</h3>
+              <p className="text-gray-600">Tue - Thu | 7:00 PM - 8:00 PM</p>
+            </div>
+
+            <div className="border p-4">
+              <h3 className="font-bold">Weekend Sparring</h3>
+              <p className="text-gray-600">Sat - Sun | 9:00 AM - 11:00 AM</p>
+            </div>
 
           </div>
         </section>
 
-        {/* WHY US */}
-        <section className="py-24 px-6 bg-gray-950 text-center">
-          <h2 className="text-4xl font-bold mb-12">Why Leverage Star?</h2>
-
-          <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto text-gray-300">
-            <div>
-              <h4 className="text-xl font-semibold mb-2">Elite Coaches</h4>
-              <p>Experienced fighters and certified trainers.</p>
-            </div>
-
-            <div>
-              <h4 className="text-xl font-semibold mb-2">Modern Gym</h4>
-              <p>Professional boxing ring & advanced equipment.</p>
-            </div>
-
-            <div>
-              <h4 className="text-xl font-semibold mb-2">All Levels</h4>
-              <p>From beginners to competitive athletes.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-24 px-6 bg-red-600 text-center">
-          <h2 className="text-4xl font-bold mb-4">
-            Ready to Transform Your Body?
+        {/* CTA SECTION */}
+        <section className="py-24 bg-red-600 text-white text-center">
+          <h2 className="text-4xl font-bold uppercase">
+            Ready to Transform Yourself?
           </h2>
-          <p className="text-white/90 mb-6">
-            Join Leverage Star Boxing Club today and start your journey.
+          <p className="mt-4 text-lg">
+            Join Activitar Fitness Club today
           </p>
-          <button className="bg-white text-red-600 px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition">
+          <button className="mt-6 bg-white text-red-600 px-6 py-3 font-bold uppercase">
             Book Free Trial
           </button>
         </section>
 
         {/* CONTACT */}
-        <section className="py-20 px-6 bg-black text-center">
-          <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+        <section className="py-20 bg-black text-white text-center">
+          <h2 className="text-3xl font-bold mb-6 uppercase">Contact</h2>
 
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-gray-300">
             First Floor, Blue Wave Tower - Office 9<br />
             Al Ain - Dubai Rd - Wadi Al Safa 5<br />
-            Dubai, United Arab Emirates
+            Dubai, UAE
           </p>
 
           <p className="mt-4 text-gray-400">
-            📞 +971 52 745 0997
+            +971 52 745 0997
           </p>
         </section>
 
         {/* FOOTER */}
-        <footer className="py-6 text-center text-gray-500 text-sm border-t border-gray-800">
-          © {new Date().getFullYear()} Leverage Star Boxing Club. All rights reserved.
+        <footer className="py-6 text-center text-gray-500 text-sm bg-white border-t">
+          © {new Date().getFullYear()} Activitar Fitness Club. All rights reserved.
         </footer>
 
       </main>
